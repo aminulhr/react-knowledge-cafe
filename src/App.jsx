@@ -1,7 +1,11 @@
+import Blogs from "./componests/Blogs";
+import Header from "./componests/Header";
+
 const App = () => {
   return (
     <div>
-      <h1 className="text-6xl font-bold underline bg-red-700">Hello world!</h1>
+      <Header />
+      <Blogs />
     </div>
   );
 };
