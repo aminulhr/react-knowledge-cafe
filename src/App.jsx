@@ -3,7 +3,7 @@ import Header from "./componests/Header";
 
 const App = () => {
   return (
-    <div>
+    <div className="p-10 bg-white">
       <Header />
       <Blogs />
     </div>
