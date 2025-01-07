@@ -4,6 +4,10 @@ import Blog from "./Blog";
 const Blogs = () => {
   const [blogs, setBlogs] = useState([]);
   const [bookmark, setBookmark] = useState([]);
+  const [readTime, setReadTime] = useState(0);
+  const handaletime = (time) => {
+    setReadTime(readTime + time);
+  };
   const handaleBookmark = (blog) => {
     const newBookmark = [...bookmark, blog];
     setBookmark(newBookmark);
@@ -21,13 +25,13 @@ const Blogs = () => {
             key={blog.id}
             blog={blog}
             handaleBookmark={handaleBookmark}
-            bookmark={bookmark}
+            handaletime={handaletime}
           ></Blog>
         ))}
       </div>
       <div className="m-5 p-3 bg-gray-400 text-center">
         <p className="text-black text-3xl bg-slate-300 rounded-md p-3 ">
-          Spent time on read : min
+          Spent time on read : {readTime} min
         </p>
         <p className="text-3xl text-blue-800">
           Bookmarked Blogs : {bookmark.length}

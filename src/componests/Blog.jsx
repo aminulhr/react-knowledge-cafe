@@ -2,8 +2,8 @@ import { faBookmark } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "../Blog.css";
 
-const Blog = ({ blog, handaleBookmark, bookmark }) => {
-  const { hashtags } = blog;
+const Blog = ({ blog, handaleBookmark, handaletime }) => {
+  const { hashtags, reading_time } = blog;
   return (
     <div>
       <div className="m-5 p-3">
@@ -39,7 +39,12 @@ const Blog = ({ blog, handaleBookmark, bookmark }) => {
             </span>
           ))}
         </p>
-        <button>Mark as Read</button>
+        <button
+          className="font-bold text-purple-800 underline"
+          onClick={() => handaletime(reading_time)}
+        >
+          Mark as Read
+        </button>
       </div>
     </div>
   );
