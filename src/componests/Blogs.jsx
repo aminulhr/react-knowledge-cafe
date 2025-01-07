@@ -5,8 +5,10 @@ const Blogs = () => {
   const [blogs, setBlogs] = useState([]);
   const [bookmark, setBookmark] = useState([]);
   const [readTime, setReadTime] = useState(0);
-  const handaletime = (time) => {
+  const handaletime = (id, time) => {
     setReadTime(readTime + time);
+    const remining = bookmark.filter((bookmark) => bookmark.id !== id);
+    setBookmark(remining);
   };
   const handaleBookmark = (blog) => {
     const newBookmark = [...bookmark, blog];

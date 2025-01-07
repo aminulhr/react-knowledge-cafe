@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "../Blog.css";
 
 const Blog = ({ blog, handaleBookmark, handaletime }) => {
-  const { hashtags, reading_time } = blog;
+  const { id, hashtags, reading_time } = blog;
   return (
     <div>
       <div className="m-5 p-3">
@@ -41,7 +41,7 @@ const Blog = ({ blog, handaleBookmark, handaletime }) => {
         </p>
         <button
           className="font-bold text-purple-800 underline"
-          onClick={() => handaletime(reading_time)}
+          onClick={() => handaletime(id, reading_time)}
         >
           Mark as Read
         </button>
