@@ -31,7 +31,7 @@ const Blog = ({ blog, handaleBookmark, handaletime }) => {
             </button>
           </div>
         </div>
-        <h1 className="text-4xl">{blog.title}</h1>
+        <h1 className="text-4xl font-bold text-green-400">{blog.title}</h1>
         <p>
           {hashtags.map((hash, index) => (
             <span key={index} className="text-blue-500 p-1">

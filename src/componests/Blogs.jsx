@@ -30,7 +30,7 @@ const Blogs = () => {
         ))}
       </div>
       <div className="m-5 p-3 bg-gray-400 text-center">
-        <p className="text-black text-3xl bg-slate-300 rounded-md p-3 ">
+        <p className="text-black text-2xl font-extrabold bg-slate-300 rounded-md p-3 ">
           Spent time on read : {readTime} min
         </p>
         <p className="text-3xl text-blue-800">
